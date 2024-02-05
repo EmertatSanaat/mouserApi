@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل جستجو</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="panel">
+            <div class="search-container">
+                <input class="search-box" type="text" placeholder="لطفا محصول مورد نظر رو سرچ کنید">
+                <select class="select-method">
+                    <option value="nameSearch">  جستجو بر اساس نام</option>
+                    <option value="partSearch"> جستجو بر اساس پارت نامبر</option>
+                </select>
+                <button class="search-button">                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="search-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                  </svg></button>
+                  
+            </div>
+            <!-- List of items returned by API -->
+            <section class="list-section">
+                <ul id='search-result' class="search-result-container">
+                    <li class="list-item">
+                        <!-- titles -->
+                        <div class="list-item-information">
+                            <div class="info-box">عکس محصول</div>
+                            <div  class="info-box">پارت نامبر</div>
+                            <div  class="info-box">تولید کننده</div>
+                            <div  class="info-box">توضیحات</div>
+                        </div>
+                    </li>
+                </ul>
+                <h4 id="search-error" style="margin-top : 10px">محصولی برای نمایش وجود ندارد لطفا جستجو کنید</h4>
+                <div class="loading">
+                    <div class="loading-el"></div>
+                    <div class="loading-el"></div>
+                    <div class="loading-el"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
